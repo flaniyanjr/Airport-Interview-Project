@@ -1,10 +1,10 @@
 import FlightCard from './FlightCard'
 
 
-function FlightList({allFlights}) {
+function FlightList({allFlights, addToRotation}) {
 
     const flights= allFlights.map(flightObj => {
-        return <FlightCard key= {flightObj.ident} flightObj= {flightObj}/>
+        return <FlightCard key= {flightObj.ident} flightObj= {flightObj} addToRotation= {addToRotation}/>
     })
     
     return(

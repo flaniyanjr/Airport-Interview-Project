@@ -11,6 +11,7 @@ function App() {
 
   const [allAircrafts, setAllAircrafts] = useState([])
   const [allFlights, setAllFlights]= useState([])
+  const [rotationList, setRotationList] = useState([])
 
   useEffect(() =>{
     fetch('https://recruiting-assessment.alphasights.com/api/aircrafts')
@@ -34,14 +35,18 @@ function App() {
     })
   }, [])
 
+  function addToRotation(newFlight) {
+    setRotationList(current => [...current, newFlight])
+  }
+
 
   return (
     <div className= 'app-container'>
       <Header />
       <div className= 'main-content'>
       <AircraftList allAircrafts= {allAircrafts}/>
-      <RotationList />
-      <FlightList allFlights={allFlights}/>
+      <RotationList rotationList= {rotationList}/>
+      <FlightList allFlights={allFlights} addToRotation= {addToRotation} />
       {/* <FlightSchedule /> */}
       </div>
     </div>

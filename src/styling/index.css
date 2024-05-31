@@ -41,7 +41,7 @@ code {
   overflow-y: scroll;
 }
 
-.aircraft-box {
+.aircraft-box, .flight-box, .rotation-box {
   border: 1px solid #000;
   padding: 10px;
   margin-bottom: 10px;
@@ -51,13 +51,6 @@ code {
 .flights-list-box {
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
-
-.flight-box {
-  border: 1px solid #000;
-  padding: 10px;
-  margin-bottom: 10px;
 }
 
 .rotation-list-box {
