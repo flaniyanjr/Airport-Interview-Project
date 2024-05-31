@@ -36,7 +36,13 @@ function App() {
   }, [])
 
   function addToRotation(newFlight) {
-    setRotationList(current => [...current, newFlight])
+    if (rotationList.length === 0) {
+      setRotationList(current => [...current, newFlight])
+    } else if (rotationList.length > 0 && rotationList[rotationList.length-1].destination === newFlight.origin) {
+      setRotationList(current => [...current, newFlight])
+    } else if (rotationList.length > 0 && rotationList[rotationList.length-1].destination !== newFlight.origin) {
+      alert("Flight's origin must be the previous flight's destination")
+    } 
   }
 
   function removeFromRotation(ident) {
