@@ -41,7 +41,7 @@ function App() {
     } else if (rotationList.length > 0 && rotationList[rotationList.length-1].destination === newFlight.origin) {
       setRotationList(current => [...current, newFlight])
     } else if (rotationList.length > 0 && rotationList[rotationList.length-1].destination !== newFlight.origin) {
-      alert("Flight's origin must be the previous flight's destination")
+      alert(`Flight's origin must be ${rotationList[rotationList.length-1].destination}`)
     } 
   }
 
