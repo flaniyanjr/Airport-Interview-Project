@@ -39,13 +39,20 @@ function App() {
     setRotationList(current => [...current, newFlight])
   }
 
+  function removeFromRotation(ident) {
+    const newRotationList= rotationList.filter(rotationObj => {
+      return rotationObj.ident !== ident
+    })
+    setRotationList(newRotationList)
+  }
+
 
   return (
     <div className= 'app-container'>
       <Header />
       <div className= 'main-content'>
       <AircraftList allAircrafts= {allAircrafts}/>
-      <RotationList rotationList= {rotationList}/>
+      <RotationList rotationList= {rotationList} removeFromRotation= {removeFromRotation}/>
       <FlightList allFlights={allFlights} addToRotation= {addToRotation} />
       {/* <FlightSchedule /> */}
       </div>

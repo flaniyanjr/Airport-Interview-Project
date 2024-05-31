@@ -1,7 +1,11 @@
 
-function RotationCard({rotationObj}) {
+function RotationCard({removeFromRotation, rotationObj}) {
 
     const {ident, departuretime, arrivaltime, readable_departure, readable_arrival, origin, destination}= rotationObj
+
+    function handleDelete() {
+        removeFromRotation(ident)
+    }
 
     return(
         <div className= 'rotation-box'>
@@ -9,7 +13,7 @@ function RotationCard({rotationObj}) {
             <p>Flight: {ident}</p>
             <p>{origin} → {destination}</p>
             <p>{readable_departure} - {readable_arrival}</p>
-            <button> delete </button>
+            <button onClick={handleDelete}> delete </button>
         </div>
         </div>
     )
