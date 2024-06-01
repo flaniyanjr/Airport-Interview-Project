@@ -40,7 +40,7 @@ function App() {
       setRotationList(current => [...current, newFlight])
 
 // Validations that lead to a successful entry in the rotation column
-    } else if (rotationList.length > 0 && rotationList[rotationList.length-1].destination === newFlight.origin && rotationList[rotationList.length-1].departuretime < newFlight.departuretime) {
+    } else if (rotationList.length > 0 && rotationList[rotationList.length-1].destination === newFlight.origin && rotationList[rotationList.length-1].departuretime < newFlight.departuretime && rotationList[rotationList.length-1].arrivaltime < newFlight.departuretime && (newFlight.departuretime - rotationList[rotationList.length-1].arrivaltime) >= 1200) {
       setRotationList(current => [...current, newFlight])
 
 // Validation for if flight doesn't leave from correct airport
@@ -48,8 +48,12 @@ function App() {
       alert(`Error: Flight's origin must be ${rotationList[rotationList.length-1].destination}`)
 
 // Validation for if flight's aren't placed in order of time
-    } else if (rotationList.length > 0 && rotationList[rotationList.length-1].departuretime > newFlight.departuretime) {
+    } else if (rotationList.length > 0 && rotationList[rotationList.length-1].departuretime > newFlight.departuretime || rotationList[rotationList.length-1].arrivaltime > newFlight.departuretime) {
       alert('Error: Flights need to be placed in order of time')
+
+// Validation for if the next flight is less than 20 mins after the previous flight
+    } else if (rotationList.length > 0 && (newFlight.departuretime - rotationList[rotationList.length-1].arrivaltime) < 1200) {
+      alert("Error: Flight's departure time must be at least 20 min after previous flight's arrival time")
     }
   }
 
