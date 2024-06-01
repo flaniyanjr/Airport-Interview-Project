@@ -2,7 +2,6 @@ import '../styling/App.css';
 import { useEffect, useState } from "react";
 import FlightList from './FlightList';
 import {Grid, Box} from '@mui/material'
-import FlightSchedule from './FlightSchedule';
 import Header from './Header';
 import AircraftList from './AircraftList';
 import RotationList from './RotationList';
@@ -69,7 +68,6 @@ function App() {
       <AircraftList allAircrafts= {allAircrafts}/>
       <RotationList rotationList= {rotationList} removeFromRotation= {removeFromRotation}/>
       <FlightList allFlights={allFlights} addToRotation= {addToRotation} />
-      {/* <FlightSchedule /> */}
       </div>
     </div>
   );
