@@ -1,5 +1,4 @@
 
-
 function AircraftList({allAircrafts, rotationList}) {
 
     const aircraftTypes= allAircrafts.map(aircraftObj => {

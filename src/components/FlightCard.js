@@ -1,6 +1,4 @@
 
-
-
 function FlightCard({flightObj, addToRotation}) {
     
     function handleClick() {
@@ -16,9 +14,6 @@ function FlightCard({flightObj, addToRotation}) {
         </div>
     )
 }
-
-
-
 
 
 export default FlightCard

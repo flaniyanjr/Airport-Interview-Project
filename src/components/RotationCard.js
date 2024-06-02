@@ -1,5 +1,5 @@
 
-function RotationCard({removeFromRotation, rotationObj}) {
+function RotationCard({rotationObj}) {
 
     const {ident, departuretime, arrivaltime, readable_departure, readable_arrival, origin, destination}= rotationObj
 
