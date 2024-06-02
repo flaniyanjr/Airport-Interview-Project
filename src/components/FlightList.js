@@ -1,6 +1,5 @@
 import FlightCard from './FlightCard'
 
-
 function FlightList({allFlights, addToRotation, rotationList}) {
 
     const flights= allFlights.map(flightObj => {
@@ -9,6 +8,7 @@ function FlightList({allFlights, addToRotation, rotationList}) {
 
     let filteredFlightCards
 
+// Filters flight list so that it only shows flights that leave from the corrent airport and are at least 20 min after the previous flight after a flight is added to the rotation list
     if (rotationList.length > 0) {
         const filteredFlights= allFlights.filter(flightObj => {
             return flightObj.origin === rotationList[rotationList.length-1].destination && flightObj.departuretime-rotationList[rotationList.length-1].arrivaltime >= 1200
@@ -24,6 +24,5 @@ function FlightList({allFlights, addToRotation, rotationList}) {
             </div>
     )
 }
-
 
 export default FlightList
