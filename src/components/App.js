@@ -74,7 +74,7 @@ function App() {
       <div className= 'main-content'>
       <AircraftList allAircrafts= {allAircrafts} rotationList= {rotationList}/>
       <RotationList rotationList= {rotationList} removeFromRotation= {removeFromRotation}/>
-      <FlightList allFlights={allFlights} addToRotation= {addToRotation} />
+      <FlightList allFlights={allFlights} addToRotation= {addToRotation} rotationList= {rotationList}/>
       </div>
     </div>
   );
