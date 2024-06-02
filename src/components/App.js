@@ -33,7 +33,7 @@ function App() {
     })
   }, [])
 
-// Adding the first flgiht into the rotation column
+// Adding the first flight into the rotation column
   function addToRotation(newFlight) {
     if (rotationList.length === 0) {
       setRotationList(current => [...current, newFlight])
