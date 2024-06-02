@@ -66,3 +66,9 @@ code {
   width: 40%;
   overflow-y: scroll;
 }
+
+.delete-button {
+  display: flex;
+  width: 20%;
+  margin-left: 45%;
+}

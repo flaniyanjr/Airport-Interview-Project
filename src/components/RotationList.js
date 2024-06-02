@@ -6,9 +6,16 @@ function RotationList({removeFromRotation, rotationList}) {
         return <RotationCard key= {rotationObj.ident} rotationObj= {rotationObj} removeFromRotation= {removeFromRotation}/>
     })
 
+    function handleDelete() {
+        removeFromRotation(rotationFlights[rotationFlights.length-1].props.rotationObj.ident)
+    }
+
     return(
         <div className="rotation-list-box">
             {rotationFlights}
+            <div className= 'delete-button'>
+                {rotationFlights.length > 0 ? <button onClick={handleDelete}>delete</button> : null}
+            </div>
         </div>
     )
 }
