@@ -1,4 +1,3 @@
-import '../styling/App.css';
 import { useEffect, useState } from "react";
 import FlightList from './FlightList';
 import Header from './Header';
