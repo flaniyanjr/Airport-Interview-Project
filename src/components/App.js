@@ -4,6 +4,7 @@ import FlightList from './FlightList';
 import Header from './Header';
 import AircraftList from './AircraftList';
 import RotationList from './RotationList';
+import Timeline from './Timeline';
 
 function App() {
 
@@ -55,10 +56,11 @@ function App() {
     <div className= 'app-container'>
       <Header />
       <div className= 'main-content'>
-      <AircraftList allAircrafts= {allAircrafts} rotationList= {rotationList}/>
-      <RotationList rotationList= {rotationList} removeFromRotation= {removeFromRotation}/>
-      <FlightList allFlights={allFlights} addToRotation= {addToRotation} rotationList= {rotationList}/>
+        <AircraftList allAircrafts= {allAircrafts} rotationList= {rotationList}/>
+        <RotationList rotationList= {rotationList} removeFromRotation= {removeFromRotation}/>
+        <FlightList allFlights={allFlights} addToRotation= {addToRotation} rotationList= {rotationList}/>
       </div>
+      <div className= 'timeline-container'> <Timeline rotationList= {rotationList}/></div>
     </div>
   );
 }

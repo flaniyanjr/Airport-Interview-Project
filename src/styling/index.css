@@ -72,3 +72,48 @@ code {
   width: 20%;
   margin-left: 45%;
 }
+
+.timeline-container{
+  display: flex;
+  margin-top: 10px;
+}
+
+.timeline{
+  display: flex;
+  width: 597px;
+  border: 1px solid #000;
+}
+
+.idle-block {
+  display: flex;
+  flex-direction: row;
+  width:20px;
+  height:20px;
+  background:lightgray;
+  border-top: #000;
+  border-bottom: #000;
+  float: left;
+}
+
+.service-block {
+  display: flex;
+  flex-direction: row;
+  width:20px;
+  height:20px;
+  background:green;
+  border-top: #000;
+  border-bottom: #000;
+  float: left;
+}
+
+.turnaround-block {
+  display: flex;
+  flex-direction: row;
+  width:20px;
+  height:20px;
+  background:purple;
+  border-top: #000;
+  border-bottom: #000;
+  float: left;
+}
+
