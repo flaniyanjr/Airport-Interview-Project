@@ -24,7 +24,7 @@ function Timeline({rotationList}) {
         }
     })
 
-    // const minuteBlocksList= minutesList.map(minute => {
+    // const minuteBlocks= minutesList.map(minute => {
     //     let lst= []
     //     for (let i=0; i < rotationListTimes.length; i++) {
     //         if (rotationListTimes[i][0] <= minute && rotationListTimes[i][1] >= minute) {
