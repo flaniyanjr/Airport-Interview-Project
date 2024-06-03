@@ -1,5 +1,8 @@
+# Running the App
+I completed this project using React. In order to run the app in the development mode, use either **npm start** or **yarn start**
+
 # Design Decisions
-In this section I'm going to list all of the files I created and talk about what they do/ my thought process behind them. I completed this project using React
+In this section I'm going to list all of the files I created and talk about what they do/ my thought process behind them.
 
 ## File Paths
 ### src/components/App.js
@@ -11,7 +14,7 @@ In this section I'm going to list all of the files I created and talk about what
 - Here I formatted the date and the titles for each column of data
 
 ### src/components/AircraftList.js
-- First I created an array of all of the aircraft types, then created a unique array of types in order to filter out duplicates. (Even though I knew that, as the project README states, there was only 1 type of aircraft, I still included this code to show how to get a list of all aircraft types in case there were multiple)
+- First I created an array of all of the aircraft types, then created a unique array of types in order to filter out duplicates. (Even though I knew that, as the project README states, there was only 1 type of aircraft, I still included this code to show how to get a list of all aircraft types for a scenario where there are multiple)
 - I then wrote code that calculated the total number of seconds for each flight in the rotation list and divided that by the total number of seconds in a day in order to calculate the utilisation percentage of the aircraft.
 
 ### src/components/RotationList.js
@@ -25,7 +28,7 @@ In this section I'm going to list all of the files I created and talk about what
 ### src/components/FlightList.js
 - Here I created cards for each flight in the flight list
 - I also created a filtered list of flight cards that is only enabled when a flight has been added to the rotation list.
-- The filtered list of flight cards only shows flights that depart from the airport of the previous flight's destination and also only shows flights that have a departure time that is at least 20 min after the previous flight's arrival time (To satisfy the "turnaround time" and "aircrafts cannot teleport" requirements)
+- The filtered list of flight cards only shows flights that depart from the airport of the previous flight's destination and also only shows flights that have a departure time that is at least 20 min after the previous flight's arrival time. (To satisfy the "turnaround time" and "aircrafts cannot teleport" requirements)
 - I conditionally render the flight list based on if there are flights in the rotation list or not
 
 ### src/components/FlightCard.js
