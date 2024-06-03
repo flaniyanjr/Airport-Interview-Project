@@ -14,8 +14,6 @@ function Timeline({rotationList}) {
         return <div className= 'idle-block'></div>
     })
 
-// For each hour, I want to look at each element in the rotaionListTimes and see if the hour falls within the time period. If it does then return green, if it doesn't then return gray
-
     const minuteBlocks= minutesList.map(minute => {
         for (let i=0; i < rotationListTimes.length; i++) {
             if (rotationListTimes[i][0] <= minute && rotationListTimes[i][1] >= minute) {
