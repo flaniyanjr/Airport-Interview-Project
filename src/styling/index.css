@@ -81,7 +81,6 @@ code {
 .timeline{
   display: flex;
   width: 597px;
-  border: 1px solid #000;
 }
 
 .idle-block {

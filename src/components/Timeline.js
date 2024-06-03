@@ -1,9 +1,8 @@
-import TimelineCard from "./TimelineCard"
-
 
 function Timeline({rotationList}) {
+
     let minutesList= []
-    for (let i=0; i <= 1440; i ++) {
+    for (let i=0; i <= 1440; i++) {
         minutesList.push(i)
     }
 
@@ -24,6 +23,20 @@ function Timeline({rotationList}) {
             }
         }
     })
+
+    // const minuteBlocksList= minutesList.map(minute => {
+    //     let lst= []
+    //     for (let i=0; i < rotationListTimes.length; i++) {
+    //         if (rotationListTimes[i][0] <= minute && rotationListTimes[i][1] >= minute) {
+    //             lst.push(<div className= 'service-block'></div>) 
+    //         } else if (minute > rotationListTimes[i][1] && minute < (rotationListTimes[i][1] + 20)) {
+    //             lst.push(<div className= 'turnaround-block'></div>) 
+    //         } else {
+    //             lst.push(<div className= 'idle-block'> </div>) 
+    //         }
+    //     }
+    //     return lst
+    // })
 
     return(
         <div className= 'timeline'>
