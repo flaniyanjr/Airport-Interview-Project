@@ -15,11 +15,11 @@ function Timeline({rotationList}) {
     const minuteBlocks= minutesList.map(minute => {
         for (let i=0; i < rotationListTimes.length; i++) {
             if (rotationListTimes[i][0] <= minute && rotationListTimes[i][1] >= minute) {
-                return <div className= 'service-block'></div>
+                return <div key= {minute} className= 'service-block'></div>
             } else if (minute > rotationListTimes[i][1] && minute < (rotationListTimes[i][1] + 20)) {
-                return <div className= 'turnaround-block'></div>
-            } else {
-                return <div className= 'idle-block'> </div>
+                return <div key= {minute} className= 'turnaround-block'></div>
+            }  {
+                return <div key= {minute} className= 'idle-block'> </div>
             }
         }
     })
